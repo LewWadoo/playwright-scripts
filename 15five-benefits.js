@@ -41,12 +41,7 @@ const password = config['15FIVE_PASSWORD'];
     
     // Submit the form
     console.log("Submitting the login form...");
-    await page.click('button[type="submit"]'); // Adjust the selector if necessary
-    // await page.waitForNavigation();
-    
-    // After successful login, navigate to the report page
-    // console.log("Navigating to the 15Five report page...");
-    // await page.goto('https://my.15five.com/report/current/', { timeout: 60000, waitUntil: 'domcontentloaded' });
+    await page.click('button[type="submit"]');
     
     // Wait for the input fields to load
     console.log("Waiting for input fields...");
