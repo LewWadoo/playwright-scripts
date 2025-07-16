@@ -11,13 +11,13 @@
 
 2. Install Node Modules
 
-   Navigate into the project directory:
+   - Navigate into the project directory:
 
    ```bash
    cd playwright-scripts
    ```
 
-   Install the necessary node modules:
+   - Install the necessary node modules:
 
    ```bash
    npm install
