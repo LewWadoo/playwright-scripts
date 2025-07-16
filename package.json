@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "js-yaml": "^4.1.0",
     "playwright": "^1.53.1"
   }
 }

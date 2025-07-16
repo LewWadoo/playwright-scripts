@@ -1,1 +1,9 @@
 MNOGO_RU_NUMBER: "YOUR_BONUS_NUMBER_HERE"
+
+# Non-monetary benefits for ShakaCode feedback
+NON_MONETARY_BENEFITS:
+ - 'First benefit'
+ - 'Second benefit'
+
+15FIVE_EMAIL_ADDRESS: ""
+15FIVE_PASSWORD: ""

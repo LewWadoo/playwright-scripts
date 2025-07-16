@@ -46,3 +46,41 @@
    ```
 
 Make sure to have Yandex browser installed at the specified path (/usr/bin/yandex-browser) for the script to execute successfully.
+
+## Additional Scripts
+
+### Shaka Code Feedback Script
+
+This script allows you to input non-monetary benefits into the feedback form for ShakaCode.
+
+#### Running the Script
+
+1. **Ensure Node Modules are Installed**
+   
+   Make sure you have the required Node modules installed:
+
+   ```bash
+   npm install
+   ```
+
+2. Configure your Application Settings
+
+   Open application.yml and modify the NON_MONETARY_BENEFITS section to include your preferred items:
+
+   # Non-monetary benefits for ShakaCode feedback
+   NON_MONETARY_BENEFITS:
+     - 'First benefit'
+     - 'Second benefit'
+
+3. Run the Feedback Script
+
+   You can run the script using Node.js:
+
+   ```bash
+   node 15five-benefits.js
+   ```
+
+### Note:
+- The script is configured to run in Firefox. Make sure it's installed on your system and accessible.
+- The script keeps the browser open for 10 minutes to allow for manual inputs. Adjust the timeout in the script as needed.
+- Adjust the script as necessary to accommodate any changes in the website structure or behavior.
