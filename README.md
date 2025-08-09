@@ -21,20 +21,29 @@
 
    ```bash
    npm install
+   npx playwright install
    ```
+
+   - Download Yandex.deb
+
+   - Install Yandex Browser from deb.
+
+    ```bash
+    sudo dpkg -i <path-to-file>/Yandex.deb
+    ```
 
 3. Configuration
 
    - Copy the example configuration file to create your own:
 
       ```bash
-      cp application.yml.example application.yml      
+      cp application.yml.example application.yml
       ```
 
    - Open application.yml in a text editor and set your bonus number:
 
       ```yaml
-      BONUS_NUMBER: "YOUR_BONUS_NUMBER_HERE"      
+      BONUS_NUMBER: "YOUR_BONUS_NUMBER_HERE"
       ```
 
 4. Run the Script
@@ -56,7 +65,7 @@ This script allows you to input non-monetary benefits into the feedback form for
 #### Running the Script
 
 1. **Ensure Node Modules are Installed**
-   
+
    Make sure you have the required Node modules installed:
 
    ```bash

@@ -1,4 +1,5 @@
 MNOGO_RU_NUMBER: "YOUR_BONUS_NUMBER_HERE"
+PATH_TO_YANDEX_BROWSER: "/usr/bin/yandex-browser"
 
 # Non-monetary benefits for ShakaCode feedback
 NON_MONETARY_BENEFITS:
