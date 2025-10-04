@@ -8,3 +8,8 @@ NON_MONETARY_BENEFITS:
 
 15FIVE_EMAIL_ADDRESS: ""
 15FIVE_PASSWORD: ""
+
+BACKIT_EMAIL: ""
+BACKIT_PASSWORD: ""
+
+# Non-monetary benefits for ShakaCode feedback
