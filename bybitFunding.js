@@ -1,12 +1,22 @@
-const { chromium } = require('playwright');
-const fs = require('fs');
 const { exec } = require('child_process');
-const config = require('./playwright.config'); // Import Playwright settings
+const { RestClientV5 } = require('bybit-api');
 
-const storageStatePath = 'cache/bybitStorageState.json';
-const ledgerFilePath = '~/src/lewwadoo/ledger/ledger-2022.ledger'; // Adjust the path if necessary
+const ledgerFilePath = '~/src/lewwadoo/ledger/ledger-2022.ledger';
 const ledgerCommand = `ledger -f ${ledgerFilePath} balance "Assets:cryptocurrency:Bybit:Funding"`;
-const timeoutForLogin = 240000; // for manual login
+
+// Get API credentials from pass
+function getPassValue(passPath) {
+  return new Promise((resolve, reject) => {
+    exec(`pass show "${passPath}"`, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error retrieving from pass: ${stderr || error.message}`);
+        reject(error);
+        return;
+      }
+      resolve(stdout.trim());
+    });
+  });
+}
 
 // Parse all coins and values from ledger output
 function getLedgerBalances() {
@@ -37,226 +47,101 @@ function getLedgerBalances() {
   });
 }
 
-
-// Simple number parser: assumes same format for ledger and Bybit
-function parseNumber(str) {
-  str = String(str).replace(/[^\d.\-+]/g, '');
-  return Number(str);
-}
-
-async function checkAuthentication(page) {
+// Get balance for a specific coin from Bybit API
+async function getBybitBalance(client, coin) {
   try {
-    // Check if login/register elements are present (indicating logged out)
-    const loginElementExists = await page.locator('#HEADER-LOGIN, .header-login').count() > 0;
-    const registerElementExists = await page.locator('#HEADER-REGISTER, .header-register').count() > 0;
+    const response = await client.getCoinBalance({
+      accountType: 'FUND',
+      coin: coin,
+    });
     
-    if (loginElementExists || registerElementExists) {
-      console.log('Login/Register buttons found - user not authenticated');
-      return false;
+    if (response.retCode !== 0) {
+      console.error(`Bybit API error for ${coin}:`, response.retMsg, `(retCode: ${response.retCode})`);
+      return null;
     }
-
-    // Additional check for the header status container
-    const headerStatusExists = await page.locator('#HEADER-RIGHT-LOGIN-REGISTER, .header-status').count() > 0;
-    if (headerStatusExists) {
-      console.log('Header login/register section found - user not authenticated');
-      return false;
-    }
-
-    // Check for user info element (indicating logged in)
-    const userInfoExists = await page.locator('#USER-INFO-DRAWER, .user-drawer-wrapper__header').count() > 0;
-    if (userInfoExists) {
-      console.log('User info element found - user authenticated');
-      return true;
-    }
-
-    // Wait a bit and check for user-specific content indicating logged in state
-    await page.waitForTimeout(3000);
     
-    // Check again for user info element after waiting
-    const userInfoExistsAfterWait = await page.locator('#USER-INFO-DRAWER, .user-drawer-wrapper__header').count() > 0;
-    if (userInfoExistsAfterWait) {
-      console.log('User authenticated - user info element visible after wait');
-      return true;
+    const balance = response.result?.balance;
+    if (!balance || !balance.walletBalance) {
+      return 0;
     }
-
-    // Check if we can see the assets page content (indicating logged in)
-    const assetsContentExists = await page.locator('.virtual__grid-row, [class*="asset"], [class*="balance"]').count() > 0;
-    if (assetsContentExists) {
-      console.log('User authenticated - assets content visible');
-      return true;
-    }
-
-    console.log('Authentication status unclear - assuming not authenticated');
-    return false;
+    
+    return parseFloat(balance.walletBalance);
   } catch (error) {
-    console.log('Authentication check failed:', error.message);
-    return false;
-  }
-}
-
-function deleteCacheFile() {
-  if (fs.existsSync(storageStatePath)) {
-    fs.unlinkSync(storageStatePath);
-    console.log('Deleted cache file:', storageStatePath);
-  }
-}
-
-async function waitForManualLogin(page, maxWaitTimeMs = 240000) {
-  console.log("Please log in to Bybit manually in the opened browser tab.");
-  console.log("Waiting for login completion (checking for user info element)...");
-  
-  const startTime = Date.now();
-  const checkInterval = 2000; // Check every 2 seconds
-  
-  while (Date.now() - startTime < maxWaitTimeMs) {
-    try {
-      // Check for user info element
-      const userInfoExists = await page.locator('#USER-INFO-DRAWER, .user-drawer-wrapper__header').count() > 0;
-      if (userInfoExists) {
-        console.log('Login detected! User info element appeared.');
-        return true;
-      }
-      
-      // Also check if login elements disappeared (another indicator)
-      const loginElementExists = await page.locator('#HEADER-LOGIN, .header-login').count() > 0;
-      const registerElementExists = await page.locator('#HEADER-REGISTER, .header-register').count() > 0;
-      
-      if (!loginElementExists && !registerElementExists) {
-        // Wait a bit more to see if user info element appears
-        await page.waitForTimeout(3000);
-        const userInfoExistsAfterWait = await page.locator('#USER-INFO-DRAWER, .user-drawer-wrapper__header').count() > 0;
-        if (userInfoExistsAfterWait) {
-          console.log('Login detected! Login elements disappeared and user info appeared.');
-          return true;
-        }
-      }
-      
-      // Wait before next check
-      await page.waitForTimeout(checkInterval);
-      
-    } catch (error) {
-      console.log('Error during login check:', error.message);
-      await page.waitForTimeout(checkInterval);
+    console.error(`Error fetching Bybit balance for ${coin}:`, error.message);
+    if (error.response) {
+      console.error('Response data:', error.response.data);
     }
+    return null;
   }
-  
-  console.log('Login timeout reached. Manual login was not completed in time.');
-  return false;
+}
+
+// Compare two numbers with tolerance for floating point precision
+// Use tolerance of 0.0001 (4 decimal places) which is reasonable for crypto balances
+function numbersMatch(a, b, tolerance = 0.0001) {
+  return Math.abs(a - b) < tolerance;
 }
 
 (async () => {
-  const browser = await chromium.launch({ ...config, headless: false });
-  let context;
   try {
-    if (fs.existsSync(storageStatePath)) {
-      context = await browser.newContext({ storageState: storageStatePath });
-      console.log('Loaded saved session from', storageStatePath);
-    } else {
-      context = await browser.newContext();
-    }
-    const page = await context.newPage();
-    const pageUrl = 'https://www.bybit.com/user/assets/home/fiat';
+    // Get API credentials from pass
+    console.log('Retrieving API credentials from pass...');
+    const apiKey = await getPassValue('Homebanking/Трейдинг/Биржи/Bybit/lewwadoo@gmail.com/API-Key');
+    const apiSecret = await getPassValue('Homebanking/Трейдинг/Биржи/Bybit/lewwadoo@gmail.com/API-Secret');
     
-    // Navigate to the page and check authentication
-    await page.goto(pageUrl);
-    const isAuthenticated = await checkAuthentication(page);
-    
-    if (!isAuthenticated) {
-      console.log('Not authenticated. Deleting cache and requiring manual login...');
-      deleteCacheFile();
-      await browser.close();
-      
-      // Restart with fresh context
-      const newBrowser = await chromium.launch({ ...config, headless: false });
-      context = await newBrowser.newContext();
-      const newPage = await context.newPage();
-      
-      await newPage.goto(pageUrl);
-      
-      // Wait for manual login with active monitoring
-      const loginCompleted = await waitForManualLogin(newPage, timeoutForLogin);
-      
-      if (!loginCompleted) {
-        console.error('Manual login timeout. Exiting.');
-        await newBrowser.close();
-        process.exit(3);
-      }
-      
-      // Verify authentication after manual login
-      const isAuthenticatedAfterLogin = await checkAuthentication(newPage);
-      if (!isAuthenticatedAfterLogin) {
-        console.error('Failed to authenticate even after manual login. Exiting.');
-        await newBrowser.close();
-        process.exit(3);
-      }
-      
-      await context.storageState({ path: storageStatePath });
-      console.log('New session saved to', storageStatePath);
-      
-      // Proceed with balance check on the new page
-      await performBalanceValidation(newPage);
-      await newBrowser.close();
-      return;
-    } else {
-      // Already authenticated, save session if it wasn't cached before
-      if (!fs.existsSync(storageStatePath)) {
-        await context.storageState({ path: storageStatePath });
-        console.log('Session saved to', storageStatePath);
-      }
+    if (!apiKey || !apiSecret) {
+      console.error('Failed to retrieve API credentials from pass');
+      process.exit(2);
     }
-
-    // Proceed with balance validation
-    await performBalanceValidation(page);
-  } catch (error) {
-    console.error('Error occurred:', error);
-  } finally {
-    await browser.close();
-  }
-})();
-
-async function performBalanceValidation(page) {
-  try {
-    // Get all ledger balances
+    
+    // Initialize Bybit API client
+    const client = new RestClientV5({
+      key: apiKey,
+      secret: apiSecret,
+    });
+    
+    // Get ledger balances
+    console.log('Fetching ledger balances...');
     const ledgerBalances = await getLedgerBalances();
     console.log('Ledger balances:', ledgerBalances);
-
+    
+    if (Object.keys(ledgerBalances).length === 0) {
+      console.log('No coins to validate in ledger.');
+      return;
+    }
+    
+    // Validate each coin
     let allMatch = true;
     for (const [symbol, ledgerValueRaw] of Object.entries(ledgerBalances)) {
-      // Round ledger value to 4 decimal places
-      const ledgerValue = Math.round(ledgerValueRaw * 10000) / 10000;
-      console.log(`Checking ${symbol}...`);
-      // Find the row for this coin
-      const row = page.locator('div.virtual__grid-row', { hasText: symbol }).first();
-      try {
-        await row.waitFor({ state: 'visible', timeout: 5000 });
-      } catch (err) {
-        console.error(`Row for ${symbol} not found on Bybit.`);
+      console.log(`\nChecking ${symbol}...`);
+      
+      const bybitValue = await getBybitBalance(client, symbol);
+      
+      if (bybitValue === null) {
+        console.error(`Failed to fetch balance for ${symbol} from Bybit API`);
         allMatch = false;
         continue;
       }
-      let raw = await row.locator('.virtual__grid-columns.column2').textContent();
-      if (!raw) {
-        console.error(`No value found for ${symbol} on Bybit.`);
-        allMatch = false;
-        continue;
-      }
-      raw = raw.replace(/\u00A0/g, '').replace(/\s+/g, '').trim();
-      const bybitValue = parseNumber(raw);
-      console.log(`Bybit value for ${symbol}:`, bybitValue, 'Ledger:', ledgerValue);
-      if (bybitValue === ledgerValue) {
-        console.log(`Validation successful for ${symbol}: value match.`);
+      
+      console.log(`Bybit Funding balance for ${symbol}: ${bybitValue}`);
+      console.log(`Ledger balance for ${symbol}: ${ledgerValueRaw}`);
+      
+      if (numbersMatch(bybitValue, ledgerValueRaw)) {
+        console.log(`✓ Validation successful for ${symbol}: balances match`);
       } else {
-        console.error(`Validation failed for ${symbol}: values do not match.`);
+        console.error(`✗ Validation failed for ${symbol}: balances do not match (diff: ${Math.abs(bybitValue - ledgerValueRaw)})`);
         allMatch = false;
       }
     }
+    
+    console.log('\n' + '='.repeat(50));
     if (!allMatch) {
+      console.error('✗ Validation failed: some balances do not match');
       process.exit(1);
     } else {
-      console.log('All coins validated successfully.');
+      console.log('✓ All coins validated successfully');
     }
   } catch (error) {
-    console.error('Error during balance validation:', error.message);
+    console.error('Error occurred:', error.message);
     process.exit(2);
   }
-}
+})();

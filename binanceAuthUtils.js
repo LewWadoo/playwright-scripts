@@ -44,11 +44,30 @@ async function waitForManualLogin(page, maxWaitTimeMs = 240000) {
   const checkInterval = 2000;
   while (Date.now() - startTime < maxWaitTimeMs) {
     try {
+      // Check if we're still on the login page
+      const currentUrl = page.url();
+      const isOnLoginPage = currentUrl.includes('accounts.binance.com/en/login') || currentUrl.includes('accounts.binance.com/login');
+      
+      // Check for dashboard/account icon (successful login)
       const dashboardIconExists = await page.locator('a[href*="/my/dashboard"] .header-account-icon').count() > 0;
       if (dashboardIconExists) {
         console.log('Login detected! Dashboard/account icon appeared.');
         return true;
       }
+      
+      // If not on login page anymore and no dashboard icon, user might have navigated away
+      // Check if we're on the main site (successful login but need to navigate)
+      if (!isOnLoginPage && currentUrl.includes('binance.com')) {
+        // Try to navigate to a page where we can detect authentication
+        await page.goto('https://www.binance.com/en/my/dashboard', { waitUntil: 'domcontentloaded' }).catch(() => {});
+        await page.waitForTimeout(1000);
+        const dashboardIconAfterNav = await page.locator('a[href*="/my/dashboard"] .header-account-icon').count() > 0;
+        if (dashboardIconAfterNav) {
+          console.log('Login detected after navigation! Dashboard/account icon appeared.');
+          return true;
+        }
+      }
+      
       await page.waitForTimeout(checkInterval);
     } catch (error) {
       await page.waitForTimeout(checkInterval);

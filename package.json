@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@binance/connector": "^3.6.1",
+    "bybit-api": "^4.4.0",
     "js-yaml": "^4.1.0",
     "playwright": "^1.53.1"
   }

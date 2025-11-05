@@ -1,0 +1,549 @@
+{
+  "cookies": [
+    {
+      "name": "remixlang",
+      "value": "3",
+      "domain": ".vk.com",
+      "path": "/",
+      "expires": 1789403368.436784,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "remixstlid",
+      "value": "9095516302297206440_rs4YYMNjZPfkc1qioRvugyglFJ5rhJnquppW6SAr3uH",
+      "domain": ".vk.com",
+      "path": "/",
+      "expires": 1789629558.436801,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ttp",
+      "value": "32oivplTlVg6OlBtXeVhDM1oJiW",
+      "domain": ".tiktok.com",
+      "path": "/",
+      "expires": 1794423389.704546,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_uid",
+      "value": "1758093559328694544",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1789629558,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_d",
+      "value": "1758093559",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1789629558,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "yabs-sid",
+      "value": "2487921481758093558",
+      "domain": "mc.yandex.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "i",
+      "value": "Ao2iGHU02dYVInb7WQaesrGyGktsIRhKFZpAN0W3sESkL+GrKwq3qMWQ4UR7bfMBSDGxkqmTlOYDBplm32wnuWztxk4=",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1792653558.624871,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "yandexuid",
+      "value": "6479741491758093558",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1792653558.62489,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "yuidss",
+      "value": "6479741491758093558",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1792653558.624905,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ymex",
+      "value": "2073453558.yrts.1758093558#2073453558.yrtsi.1758093558",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1789629558,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1789629564,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ar_debug",
+      "value": "1",
+      "domain": ".www.google-analytics.com",
+      "path": "/",
+      "expires": 1768503390.118233,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_tt_enable_cookie",
+      "value": "1",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1794423390,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ttp",
+      "value": "01K5B8NGZQC8YX2DG18QEXYMG3_.tt.1",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1794423390,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "utl_id2",
+      "value": "39949563307",
+      "domain": ".w.uptolike.com",
+      "path": "/",
+      "expires": 1792653558.844123,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "utl_dat",
+      "value": "\"CLuIq7SVMxAAILvZ9byVMyi72fW8lTMwABDRpIOXYzuOCCOtL6aso4o=\"",
+      "domain": ".w.uptolike.com",
+      "path": "/",
+      "expires": 1792653558.844269,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "utl_cookie",
+      "value": "39949563307",
+      "domain": ".rt.getsale.io",
+      "path": "/",
+      "expires": 1795287390.089251,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "carrotquest_device_guid",
+      "value": "fd42bbb6-91aa-4f31-a0b9-ba2d69b4b30e",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1795287393.488418,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "carrotquest_realtime_services_transport",
+      "value": "wss",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "referer",
+      "value": "https://backit.me/app-auth/ru/auth/cashback?redirect_url=https%253A%252F%252Fbackit.me%252Fru%252Fcashback%252Fmycashback",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "carrotquest_uid",
+      "value": "1691300441800838852",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1773687393,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "carrotquest_auth_token",
+      "value": "user.1691300441800838852.57128-1335e32e1963c74782dcc2f233.3fb4d28b3a1fbe78bf6a1f30fc4a429baf12c62db95f0597",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1773687393,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "carrotquest_realtime_services_key",
+      "value": "",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "locale",
+      "value": "ru",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1761332188,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "amplitude_id_42f7aae08b795bfa61a6196b8980191fbackit.me",
+      "value": "eyJkZXZpY2VJZCI6IjI4M2UxNjBlLWJiYmItNGM4NC1iN2YxLTVhNzFkNmIwYjJiMlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTc2MDcyNzM4ODYzOCwibGFzdEV2ZW50VGltZSI6MTc2MDcyNzM4ODYzOCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1795287388.638612,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "prcl",
+      "value": "9c9f03d98ced5a",
+      "domain": ".vk.com",
+      "path": "/",
+      "expires": 1760810189.49758,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.2059707745.1760727390",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1760813791,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_dc_gtm_UA-66595953-3",
+      "value": "1",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1760727449,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1792263394,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_isad",
+      "value": "2",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1760799389,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_visorc",
+      "value": "w",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1760729194,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.2.651198610.1758093558",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1795287391.54579,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ttcsid",
+      "value": "1760727390139::pMQ11h9qDXkn4HRHZSqD.2.1760727390429.0",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1794423390,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ttcsid_C6BN6OJA1SKIVFQVL7L0",
+      "value": "1760727390139::CiTi9VbwpQnLL2HQbd9x.2.1760727390430.0",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1794423390,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "auth_id",
+      "value": "pyf39mvgGaNPMtluAwkOSC4IKEcszJB5",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1763319391.54136,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "access_token_signature",
+      "value": "rtgVvS_MEJdLEXA-7sas8hFzQr8r2KBsmUcHWG5RgB5qu1uZXx5t6juXzodIn4R6kgSVxy7g4USoboweN6H2Iw",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1760727691.541403,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "jwt_access_token",
+      "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNzYwNzI3NjkxLCJ1c2VyX2lkIjo0NTgwNDc2LCJ1c2VyX3JvbGUiOiJjYXNoYmFjayIsImNsaWVudF9wbGF0Zm9ybSI6IndlYiIsImNsaWVudF9pcCI6Ijk1LjIyMC4xMDYuMTA2IiwiY2xpZW50X2lkIjoid2ViLWNsaWVudCIsImNoZWNrX2lwIjpmYWxzZSwidG9rZW4iOiJmNWY2Nzk0ZWU2ZWMzZGFhNDk2MmU4OTJhMzBlMmI1ZDk5MTBhNzc1Iiwic2NvcGUiOiJkZWZhdWx0In0",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1760727691.541416,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "refresh_token_signature",
+      "value": "6rTQVpNBtPIZDImJvF4v_BS7c9BLjmehlUpcHByz9SDf_6UQQgxmAKB0G0vdzt-j7oEUyBdOSrvh9YMUgHTxhw",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1762023391.541427,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "jwt_refresh_token",
+      "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsImV4cCI6MTc2MjAyMzM5MSwidG9rZW4iOiI4MzRlNDlhZTgyNmZiOTQ3MGNiZmEzNDEyZmNiNjk2ZjYzODc0OGQxIiwidXNlcl9pZCI6NDU4MDQ3NiwiY2xpZW50X2lwIjoiOTUuMjIwLjEwNi4xMDYiLCJjaGVja19pcCI6ZmFsc2UsInNjb3BlIjoiZGVmYXVsdCJ9",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1762023391.541438,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_8S88W4B37K",
+      "value": "GS2.2.s1760727390$o2$g0$t1760727391$j59$l0$h0",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1795287391.55006,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_XQRXJXV89Z",
+      "value": "GS2.1.s1760727389$o2$g0$t1760727392$j57$l0$h0",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1795287392.792613,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_9381GLG6E4",
+      "value": "GS2.1.s1760727389$o2$g0$t1760727392$j57$l0$h0",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1795287392.795327,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "carrotquest_session",
+      "value": "n2myz335dat32bvok1tx38y94veq3yl3",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1760730993,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "carrotquest_session_started",
+      "value": "1",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1760730993,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "amplitude_id_fad4e97561a596104abaf27aa87be45bbackit.me",
+      "value": "eyJkZXZpY2VJZCI6IjQyODg5YjU2LTMyZjUtNDlkNy1iN2JiLTE5Mjk4ZmU0YTFhNVIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6dHJ1ZSwic2Vzc2lvbklkIjoxNzYwNzI3MzkzNzU1LCJsYXN0RXZlbnRUaW1lIjoxNzYwNzI3MzkzNzU1LCJldmVudElkIjoxLCJpZGVudGlmeUlkIjowLCJzZXF1ZW5jZU51bWJlciI6MX0=",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1795287397.231878,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "bh",
+      "value": "EiYiTm90KUE7QnJhbmQiO3Y9IjgiLCJDaHJvbWl1bSI7dj0iMTM4IhoDeDg2Ig0xMzguMC43MjA0LjIzKgI/MDoFTGludXhCBjYuMTQuMEoCNjRSNiJOb3QpQTtCcmFuZCI7dj0iOC4wLjAuMCIsIkNocm9taXVtIjt2PSIxMzguMC43MjA0LjIzImDiosrHBmoZ3MrpiA7yrLelC/v68OcN6//99g+K1M2HCA==",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1795287394,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "cityId",
+      "value": "477301",
+      "domain": ".backit.me",
+      "path": "/",
+      "expires": 1761332193,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://backit.me",
+      "localStorage": [
+        {
+          "name": "_ym32852492:0_reqNum",
+          "value": "11"
+        },
+        {
+          "name": "_ym_retryReqs",
+          "value": "{}"
+        },
+        {
+          "name": "_ym_wv2rf:103376763:0",
+          "value": "1"
+        },
+        {
+          "name": "amplitude_unsent_identify_42f7aae08b795bfa61a6196b8980191f",
+          "value": "[]"
+        },
+        {
+          "name": "amplitude_unsent_identify_fad4e97561a596104abaf27aa87be45b",
+          "value": "[]"
+        },
+        {
+          "name": "_ym_wv2rf:32852492:0",
+          "value": "1"
+        },
+        {
+          "name": "alerts",
+          "value": "[{\"type\":\"info\",\"text\":{\"ru\":\"Сейчас наша служба поддержки испытывает повышенную нагрузку, поэтому время ответа может занимать от 2 до 3 дней. Мы обязательно разберём каждый запрос и дадим ответ.\\nЕсли вопрос срочный, напишите нам в онлайн-чат, мы постараемся ответить быстрее.\",\"en\":\"Our support team is currently under increased strain, so the response time may last from 2 to 3 days. We will definitely analyze each request and provide a response.\\nIf the question is urgent, write to us in the online chat. We will try to answer faster.\",\"es\":\"Our support team is currently under increased strain, so the response time may last from 2 to 3 days. We will definitely analyze each request and provide a response.\\nIf the question is urgent, write to us in the online chat. We will try to answer faster.\"},\"id\":632,\"page\":\"\",\"status\":\"visible\"}]"
+        },
+        {
+          "name": "_ym103376763:0_reqNum",
+          "value": "3"
+        },
+        {
+          "name": "_ym103376763_lsid",
+          "value": "903019963449"
+        },
+        {
+          "name": "carrotquest_requests",
+          "value": "[]"
+        },
+        {
+          "name": "_ym_synced",
+          "value": "{}"
+        },
+        {
+          "name": "carrotquest_last_activity",
+          "value": "1760727393"
+        },
+        {
+          "name": "_ym32852492_lsid",
+          "value": "1085382932841"
+        },
+        {
+          "name": "_ym_uid",
+          "value": "\"1758093559328694544\""
+        },
+        {
+          "name": "carrotquest_data",
+          "value": "{\"auth_token\":\"user.1691300441800838852.57128-1335e32e1963c74782dcc2f233.3fb4d28b3a1fbe78bf6a1f30fc4a429baf12c62db95f0597\",\"user\":{\"id\":\"1691300441800838852\",\"last_admin\":{\"id\":null,\"type\":\"default_admin\",\"name\":\"backit․me\",\"avatar\":\"https://files.carrotquest.app/avatars/default-v3.png\"},\"conversations_unread\":[],\"has_email\":true,\"has_phone\":true,\"has_conversations\":true,\"is_banned\":false,\"country\":\"Russia\",\"phone_storage_is_allowed\":false,\"email_storage_is_allowed\":false,\"data_processing_policy_is_allowed\":false,\"sdk_push_notifications_subscribed\":true,\"sdk_push_campaigns_subscribed\":true},\"app\":{\"active\":true,\"id\":\"57128\",\"name\":\"backit․me\",\"interval_until_work_time\":-1,\"settings\":{\"track_emails\":false,\"track_leave_site_attempt\":false,\"terms_of_phone_storage\":null,\"terms_of_email_storage\":null,\"locale\":\"ru-ru\",\"created\":1688029119,\"data_processing_policy\":null,\"data_processing_policy_url\":null,\"data_processing_policy_with_checkbox\":true,\"messenger_collapsed_color\":\"3a3a3a\",\"messenger_name\":\"backit․me\",\"messenger_avatar\":\"default-v3.png\",\"messenger_avatar_big\":null,\"messenger_position\":\"right_bottom\",\"messenger_collapsed_text\":\"Я тут, если что\",\"messenger_welcome_message\":\"Здравствуйте! Будем рады ответить :)\",\"messenger_show_kb_link_in_welcome_message\":false,\"messenger_offline_message\":\"Сейчас нет операторов, готовых вам помочь\",\"messenger_online_message\":\"Мы тут и готовы помочь\",\"messenger_show_powered_by\":false,\"messenger_show_privacy_policy\":null,\"messenger_mode\":\"advanced\",\"messenger_hide_collapsed\":false,\"messenger_always_show_tooltip\":false,\"messenger_reply_file\":true,\"messenger_vote\":false,\"js_code\":\"//Переходы для SPA\\r\\n//Проверяем посещение страницы каждую секунду\\r\\ncarrotquest.currentLink = '';\\r\\nvar prevLink = '';\\r\\nsetInterval(checkURL, 1000);\\r\\n\\r\\nfunction checkURL() {\\r\\n    if (location.href != carrotquest.currentLink) {\\r\\n        prevLink = carrotquest.currentLink;\\r\\n        carrotquest.currentLink = location.href;\\r\\n        //Для начала сбора\\r\\n        var checkReadyState = setInterval(function() {\\r\\n            if (document.readyState === 'complete') {\\r\\n                clearInterval(checkReadyState);\\r\\n                startCQ();\\r\\n            }\\r\\n        }, 500);\\r\\n    }\\r\\n};\\r\\nfunction startCQ() {\\r\\n    if(document.querySelector('.shop-carousel')){\\r\\n        var counter = 0;\\r\\n        document.querySelectorAll('.shop-carousel .store').forEach(function(item){\\r\\n            if(counter < 4){\\r\\n                var url = item.querySelector('.mu-store__wrapper').href;\\r\\n                var img = item.querySelector('picture img').src;\\r\\n                counter++;\\r\\n                carrotquest.track('Похожий магазин',{\\r\\n                    \\\"$url\\\":url,\\r\\n                    \\\"$img\\\":img\\r\\n                });    \\r\\n            }\\r\\n        });\\r\\n    }\\r\\n}\\r\\n//запись google clientID\\r\\n(function getGCid() {\\r\\n  var match = document.cookie.match('(?:^|;)\\\\\\\\s*_ga=([^;]*)');\\r\\n  var raw = (match) ? decodeURIComponent(match[1]) : null;\\r\\n    if (raw) {\\r\\n        match = raw.match(/(\\\\d+\\\\.\\\\d+)$/);\\r\\n    }\\r\\n    var gacid = (match) ? match[1] : null;\\r\\n    if (gacid) {\\r\\n    carrotquest.identify([{op: 'set_once', key: 'google ID', value: gacid}]);\\r\\n    }\\r\\n})();\\r\\n\\r\\n//запись яндекс ClientID\\r\\n(function getYACid() {\\r\\n  var match = document.cookie.match('(?:^|;)\\\\\\\\s*_ym_uid=([^;]*)');\\r\\n  var yacid = (match) ? decodeURIComponent(match[1]) : null;\\r\\n  if (yacid) {\\r\\n      carrotquest.identify([{op: 'set_once', key: 'yandex ID', value: yacid}]);\\r\\n  }\\r\\n})();\\r\\n\\r\\n\\r\\n/* Событие через 40 секунд бездействия (не скроллит, не водит мышкой, не кликает) */\\r\\n(function() {\\r\\n    var isLoop = false; /* поменять true на false, чтобы событие сработало только один раз этой на странице */\\r\\n    var eventTimeout = 40; /* через сколько секунд бездействия сработает событие */\\r\\n    var refreshTimeout = 1000000; /* событие будет повторно срабатывать не чаще, чем раз в столько секунд */\\r\\n    eventTimeout = eventTimeout*1000;\\r\\n    refreshTimeout = refreshTimeout*1000 - eventTimeout;\\r\\n    idleTimer();\\r\\n    function idleTimer() {\\r\\n        addIdleListeners();\\r\\n        addIdleLoop();\\r\\n    };\\r\\n    function addIdleListeners() {\\r\\n        document.addEventListener('click', refreshIdleLoop);\\r\\n        document.addEventListener('scroll', refreshIdleLoop);\\r\\n        document.addEventListener('mouseout', refreshIdleLoop);\\r\\n    };\\r\\n    function removeIdleListeners() {\\r\\n        document.removeEventListener('click', refreshIdleLoop);\\r\\n        document.removeEventListener('scroll', refreshIdleLoop);\\r\\n        document.removeEventListener('mouseout', refreshIdleLoop);\\r\\n    };\\r\\n    function refreshIdleLoop() {\\r\\n        clearTimeout(window.idleLoop);\\r\\n        addIdleLoop();\\r\\n    };\\r\\n    function addIdleLoop() {\\r\\n        window.idleLoop = setTimeout(function() {\\r\\n            carrotquest.track('Бездействует');\\r\\n            removeIdleListeners();\\r\\n            isLoop&&setTimeout(idleTimer, refreshTimeout);\\r\\n        }, eventTimeout);\\r\\n    };\\r\\n}());\\r\\n// document.addEventListener(\\\"click\\\",function(e){\\r\\n//     if(e.target.closest('.category-group')){\\r\\n//         var name = e.target.closest('.category-group').textContent.trim();\\r\\n//             carrotquest.track('Посмотрел категорию магазины - ' + name,{\\r\\n//                 \\\"Название подкатегории\\\":name\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные категории\\\",value:name}]);\\r\\n//     }\\r\\n//     if(e.target.closest('.child-categories')){\\r\\n//         if(e.target.closest('.child-item')){\\r\\n//             var name = e.target.closest('.child-item').textContent.trim();\\r\\n//             carrotquest.track('Посмотрел подкатегорию - ' + name,{\\r\\n//                 \\\"Название подкатегории\\\":name\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные подкатегории\\\",value:name}]);\\r\\n//         }\\r\\n//     }\\r\\n//     if(e.target.closest('header') && !e.target.closest('.user-block-dropdown')){\\r\\n//         if(e.target.closest('a') && !e.target.closest('.mu-header__logo')){\\r\\n//             var name = e.target.closest('a').textContent.trim();\\r\\n//             carrotquest.track('Посмотрел раздел',{\\r\\n//                 'Название раздела':name\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные разделы\\\",value:name}])\\r\\n//         }\\r\\n//     }\\r\\n//     if(e.target.closest('.mu-footer__menu-category')){\\r\\n//         if(e.target.closest('a') && !e.target.closest('[href=\\\"mailto:support@backit.me\\\"]') && !e.target.closest('[href=\\\"mailto:quality@backit.me\\\"]')){\\r\\n//             var name = e.target.closest('a').textContent.trim();\\r\\n//             carrotquest.track('Посмотрел раздел',{\\r\\n//                 'Название раздела':name\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные разделы\\\",value:name}])\\r\\n//         }\\r\\n//     }\\r\\n//     if(e.target.closest('.mu-store__like-button')){\\r\\n//         var name = e.target.closest('.offer-card').querySelector('.mu-store__title').textContent.trim();\\r\\n//         carrotquest.track('Добавил магазин в избранное',{\\r\\n//             \\\"Название магазина\\\":name\\r\\n//         });\\r\\n//         carrotquest.identify([{op:\\\"union\\\",key:\\\"Магазины в избранном\\\",value:name}])\\r\\n//     }\\r\\n//     if(e.target.closest('.mu-like-button__icon_active')){\\r\\n//         var name = document.querySelector('.mobile-name').textContent.trim();\\r\\n//         carrotquest.track('Добавил магазин в избранное',{\\r\\n//             \\\"Название магазина\\\":name\\r\\n//         });\\r\\n//         carrotquest.identify([{op:\\\"union\\\",key:\\\"Магазины в избранном\\\",value:name}])\\r\\n//     }\\r\\n//     if(e.target.closest('#activate-button')){\\r\\n//         carrotquest.track('Переход в магазин',{\\r\\n//             \\\"Название магазина\\\":document.querySelector('.mobile-name').textContent.trim()\\r\\n//         });\\r\\n//     }\\r\\n//     if(e.target.closest('#checker-form-button')){\\r\\n//         carrotquest.track('Проверил кешбек');\\r\\n//     }\\r\\n//     if(e.target.closest('.products-search-form')){\\r\\n//         if(e.target.closest('[type=\\\"button\\\"]')){\\r\\n//             var value = e.target.closest('.products-search-form').querySelector('.el-input__inner').value;\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Поисковый запрос по продуктам\\\",value:value}])\\r\\n//         }\\r\\n//     }\\r\\n//     if(e.target.closest('.user-block-dropdown')){\\r\\n//         if(e.target.closest('.mu-list__item')){\\r\\n//             var name = e.target.textContent.trim();\\r\\n//             carrotquest.track('Посмотрел ЛК - ' + name)\\r\\n//         }\\r\\n//     }\\r\\n//     if(e.target.closest('.telephone-form')){\\r\\n//         if(e.target.closest('[type=\\\"button\\\"]')){\\r\\n//             var phone = e.target.closest('.telephone-form').querySelector('.el-input__inner').value;\\r\\n//             if(phone){\\r\\n//                 carrotquest.track('Привязал телефон');\\r\\n//                 carrotquest.identify([{op:\\\"update_or_create\\\",key:\\\"$phone\\\",value:phone}])\\r\\n//             }\\r\\n//         }\\r\\n//     }\\r\\n// });\\r\\n// carrotquest.currentLink = '';\\r\\n// var prevLink = '';\\r\\n// setInterval(checkURL, 1000);\\r\\n\\r\\n// function checkURL() {\\r\\n//     if (location.href != carrotquest.currentLink) {\\r\\n//         prevLink = carrotquest.currentLink;\\r\\n//         carrotquest.currentLink = location.href;\\r\\n//         if(location.pathname.indexOf('/cashback/mycashback') > -1){\\r\\n//             carrotquest.track('Проверил кешбек');\\r\\n//         }\\r\\n//         if(document.querySelector('.product-details')){\\r\\n//             var name = document.querySelector('.product-details .title').textContent.trim().split(\\\" \\\").slice(0,5).join(' ');\\r\\n//             var amount = document.querySelector('.product-details .prices .value').textContent.trim();\\r\\n//             var img = document.querySelector('.product-details .image img').src;\\r\\n//             var url = location.href;\\r\\n            \\r\\n//             carrotquest.track('Посмотрел товар',{\\r\\n//                 '$name':name,\\r\\n//                 '$amount':amount,\\r\\n//                 '$img':img,\\r\\n//                 '$url':url,\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные товары\\\",value:name}]);\\r\\n//             if(document.querySelector('.mu-product-interface')){\\r\\n//                 var counter = 0;\\r\\n//                 document.querySelectorAll('.mu-product-interface').forEach(function(item){\\r\\n//                     counter++;\\r\\n//                     if(counter < 5){\\r\\n//                         var name = item.querySelector('.mu-product-interface__title').textContent.trim();\\r\\n//                         var img = item.querySelector('.mu-lazy-image img').src;\\r\\n//                         var amount = item.querySelector('.mu-product-interface__price').textContent.trim();\\r\\n//                         var url = item.querySelector('.nuxt-link-active').href;\\r\\n//                         carrotquest.track('Похожий товар',{\\r\\n//                             '$name':name,\\r\\n//                             '$amount':amount,\\r\\n//                             '$img':img,\\r\\n//                             '$url':url,\\r\\n//                         });\\r\\n//                     }\\r\\n//                 });\\r\\n//             }\\r\\n//         }\\r\\n//         if(location.href === \\\"https://backit.me/ru/cashback/actions\\\"){\\r\\n//             carrotquest.track('Посмотрел категорию акции',{\\r\\n//                 'Название раздела':\\\"акции\\\"\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные категории\\\",value:\\\"акции\\\"}])\\r\\n//         }\\r\\n//         if(location.href === \\\"https://backit.me/ru/cashback/products/search\\\"){\\r\\n//             carrotquest.track('Посмотрел категорию товары',{\\r\\n//                 'Название раздела':\\\"товары\\\"\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные категории\\\",value:\\\"товары\\\"}])\\r\\n//         }\\r\\n//         if(document.querySelector('.shop-page')){\\r\\n//             var name = document.querySelector('.mobile-name').textContent.trim();\\r\\n//             var img = document.querySelector('.logo img').src;\\r\\n//             var url = location.href;\\r\\n//             carrotquest.track('Посмотрел магазин',{\\r\\n//                 'Название магазина':name,\\r\\n//                 'Ссылка на картинку магазина':img,\\r\\n//                 'Ссылка на магазин':url\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные магазины\\\",value:name}]);\\r\\n//         }\\r\\n//         if(document.querySelector('.coupon-detailed')){\\r\\n//             var name = document.querySelector('.coupon__title').textContent.trim();\\r\\n//             var img = document.querySelector('.coupon__img img').src;\\r\\n//             var url = location.href;\\r\\n//             carrotquest.track('Посмотрел промокод',{\\r\\n//                 'Название промокода':name,\\r\\n//                 'Ссылка на картинку промокода':img,\\r\\n//                 'Ссылка на промокод':url\\r\\n//             });\\r\\n//             carrotquest.identify([{op:\\\"union\\\",key:\\\"Просмотренные магазины\\\",value:name}]);\\r\\n//         }\\r\\n//     }\\r\\n// };\",\"messenger_show_offline_message\":true,\"messenger_show_allow_cookies\":false,\"messenger_allow_cookies_policy\":null,\"messenger_show_confirm_subscription\":false,\"messenger_confirm_subscription_policy\":null,\"messenger_confirm_subscription_with_checkbox\":false,\"double_opt_in\":false,\"double_opt_in_logo\":\"https://files.carrotquest.app/double-opt-in-logo/default.png\",\"double_opt_in_email_consent_url\":null,\"messenger_icon_order\":[\"vk\",\"facebook\",\"instagram\",\"telegram\",\"viber\",\"whatsapp\"],\"messenger_icon_vk_show\":false,\"messenger_icon_vk_text\":\"\",\"messenger_icon_viber_show\":false,\"messenger_icon_viber_text\":\"\",\"messenger_icon_facebook_show\":false,\"messenger_icon_facebook_text\":\"\",\"messenger_icon_telegram_show\":false,\"messenger_icon_telegram_text\":\"\",\"messenger_icon_instagram_show\":false,\"messenger_icon_instagram_text\":\"\",\"messenger_icon_whatsapp_show\":false,\"messenger_icon_whatsapp_text\":\"\",\"messenger_sound_popup\":true,\"messenger_sound_part\":true,\"track_phones\":false,\"messenger_indent\":{\"vertical\":25,\"horizontal\":25},\"messenger_collapsed_animations\":[\"smile\",\"winking-smile\",\"vertical-funnel\",\"horizontal-funnel\"],\"messenger_pattern\":\"default\",\"messenger_mobile_indent\":{\"vertical\":25,\"horizontal\":25},\"messenger_theme\":\"default\",\"messenger_mode_settings\":{\"mobile\":null,\"desktop\":null},\"messenger_enable_new_conversation_button\":false,\"messenger_enable_audio_messages\":true,\"messenger_show_write_button_and_input\":true,\"messenger_multiple_attachments_allowed\":true},\"status_operators\":\"online\",\"admins\":[{\"id\":\"133990\",\"name\":\"Анна\",\"avatar\":\"https://files.carrotquest.app/avatars/1732100329935-ylrmkihz.jpeg\",\"type\":\"admin\"},{\"id\":\"132817\",\"name\":\"Евгения\",\"avatar\":\"https://files.carrotquest.app/avatars/1728983931699-uuirxwhd.jpeg\",\"type\":\"admin\"},{\"id\":\"124019\",\"name\":\"Азат\",\"avatar\":\"https://files.carrotquest.app/avatars/1747741768810-uetd6yao.jpeg\",\"type\":\"admin\"},{\"id\":\"123971\",\"name\":\"Екатерина\",\"avatar\":\"https://files.carrotquest.app/avatars/1703073821532-f7d9j8oc.jpeg\",\"type\":\"admin\"},{\"id\":\"123940\",\"name\":\"Анастасия\",\"avatar\":\"https://files.carrotquest.app/avatars/1702986229106-0j5k9grj.jpeg\",\"type\":\"admin\"},{\"id\":\"123943\",\"name\":\"Егор\",\"avatar\":\"https://files.carrotquest.app/avatars/1702986219979-v0r3hqp7.jpeg\",\"type\":\"admin\"},{\"id\":\"123942\",\"name\":\"Ясмина\",\"avatar\":\"https://files.carrotquest.app/avatars/1702986210238-rfxiblcd.jpeg\",\"type\":\"admin\"}],\"auto_events\":[],\"jsscripts\":[],\"extra_code_integrations\":[]},\"device_guid\":\"fd42bbb6-91aa-4f31-a0b9-ba2d69b4b30e\",\"ip\":\"95.220.106.106\",\"country_code\":\"RU\",\"push_domain\":\"https://app57128.pushgrow.io\",\"knowledge_base_domain\":\"app57128.carrotquest.help\",\"connect_timestamp\":1760727393,\"realtime_services\":{\"transport\":\"nginx-push-stream\",\"channels\":[\"conversation_typing.57128.1691300441800838852\",\"conversation_reply_changed.57128.1691300441800838852\",\"conversation_parts_batch.57128.1691300441800838852\",\"conversation_reply.57128.1691300441800838852\",\"message_conversation_started.57128.1691300441800838852\",\"chat_bot_conversation_finished.57128.1691300441800838852\",\"conversation.57128.1691300441800838852\",\"user_merge_finished.57128.1691300441800838852\",\"users_removed.57128.1691300441800838852\",\"ping\",\"app_online_changed.57128\",\"conversation_read.57128.1691300441800838852\",\"run_script.57128.1691300441800838852\",\"user_ban.57128.1691300441800838852\",\"conversation_notify.57128.1691300441800838852\"],\"hosts\":[\"rts-v2.carrotquest.app\"]},\"has_messenger_telegram_signature\":true}"
+        },
+        {
+          "name": "amplitude_unsent_42f7aae08b795bfa61a6196b8980191f",
+          "value": "[]"
+        },
+        {
+          "name": "amplitude_unsent_fad4e97561a596104abaf27aa87be45b",
+          "value": "[]"
+        }
+      ]
+    }
+  ]
+}

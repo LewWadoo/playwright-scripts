@@ -1,0 +1,562 @@
+{
+  "cookies": [
+    {
+      "name": "AUTH_SESSION_ID",
+      "value": "fe5ac217-f737-4689-b743-d6c9544e141b.kk-78ff7f59-gg9p7",
+      "domain": "id.x5.ru",
+      "path": "/auth/realms/ssox5id/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AUTH_SESSION_ID_LEGACY",
+      "value": "fe5ac217-f737-4689-b743-d6c9544e141b.kk-78ff7f59-gg9p7",
+      "domain": "id.x5.ru",
+      "path": "/auth/realms/ssox5id/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "KEYCLOAK_IDENTITY",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2MmE2YTcwYS0wOGNkLTQwMTktOGFiYy0zYjg4ZjVkODYzNzAifQ.eyJleHAiOjE3NjM2Mzg0MTQsImlhdCI6MTc2MTA0NjQxNCwianRpIjoiNWZkNTAyNTItZGZmZi00Yzc3LTliNWQtMDUwYTMzMmNjZjM5IiwiaXNzIjoiaHR0cHM6Ly9pZC54NS5ydS9hdXRoL3JlYWxtcy9zc294NWlkIiwic3ViIjoiZjo2NmI5YWQ2MC00Y2I0LTRlZTEtYjlhMC0wNTI4ZmRlYWMyYjE6MTQ2NTQ5NjQiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2Vzc2lvbl9zdGF0ZSI6ImZlNWFjMjE3LWY3MzctNDY4OS1iNzQzLWQ2Yzk1NDRlMTQxYiIsInNpZCI6ImZlNWFjMjE3LWY3MzctNDY4OS1iNzQzLWQ2Yzk1NDRlMTQxYiIsInN0YXRlX2NoZWNrZXIiOiJucFF0SWtvSG5KbVRQWWJIMlcyZkRFWHVXN3N3R0VqaEk5a2VyalVKUi1RIn0.PbM_Og_6Mh4JK6WF2JWA4bDg6SPFceNbcKECCfnG5K0",
+      "domain": "id.x5.ru",
+      "path": "/auth/realms/ssox5id/",
+      "expires": 1763638414.967806,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_IDENTITY_LEGACY",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2MmE2YTcwYS0wOGNkLTQwMTktOGFiYy0zYjg4ZjVkODYzNzAifQ.eyJleHAiOjE3NjM2Mzg0MTQsImlhdCI6MTc2MTA0NjQxNCwianRpIjoiNWZkNTAyNTItZGZmZi00Yzc3LTliNWQtMDUwYTMzMmNjZjM5IiwiaXNzIjoiaHR0cHM6Ly9pZC54NS5ydS9hdXRoL3JlYWxtcy9zc294NWlkIiwic3ViIjoiZjo2NmI5YWQ2MC00Y2I0LTRlZTEtYjlhMC0wNTI4ZmRlYWMyYjE6MTQ2NTQ5NjQiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2Vzc2lvbl9zdGF0ZSI6ImZlNWFjMjE3LWY3MzctNDY4OS1iNzQzLWQ2Yzk1NDRlMTQxYiIsInNpZCI6ImZlNWFjMjE3LWY3MzctNDY4OS1iNzQzLWQ2Yzk1NDRlMTQxYiIsInN0YXRlX2NoZWNrZXIiOiJucFF0SWtvSG5KbVRQWWJIMlcyZkRFWHVXN3N3R0VqaEk5a2VyalVKUi1RIn0.PbM_Og_6Mh4JK6WF2JWA4bDg6SPFceNbcKECCfnG5K0",
+      "domain": "id.x5.ru",
+      "path": "/auth/realms/ssox5id/",
+      "expires": 1763638414.967855,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "KEYCLOAK_SESSION",
+      "value": "ssox5id/f:66b9ad60-4cb4-4ee1-b9a0-0528fdeac2b1:14654964/fe5ac217-f737-4689-b743-d6c9544e141b",
+      "domain": "id.x5.ru",
+      "path": "/auth/realms/ssox5id/",
+      "expires": 1763638414.96787,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_SESSION_LEGACY",
+      "value": "ssox5id/f:66b9ad60-4cb4-4ee1-b9a0-0528fdeac2b1:14654964/fe5ac217-f737-4689-b743-d6c9544e141b",
+      "domain": "id.x5.ru",
+      "path": "/auth/realms/ssox5id/",
+      "expires": 1763638414.967915,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "KEYCLOAK_REMEMBER_ME",
+      "value": "username:79169633158",
+      "domain": "id.x5.ru",
+      "path": "/auth/realms/ssox5id/",
+      "expires": 1792582414.967927,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "TS011f02d7",
+      "value": "0147334a4adde44d2085a4749a135a90744e2e31cd67edafa9ea3a771b1f9ae3ee86ce7a6bb5e1b81247d133a244df83d50243387102639999f2b6664253e3fd6c8f3040865545aa7a6f1276cb854ca4091fed3f6176ca85bf0ee37787914370e75ed2e5169b2ab52e081356113c6c46441ccdee57b812f9fe1e1b5f49d272316ca844d441b84982e8d3e724260b5368439e9ed6bc1c562db998239907214b1bbb81c791da35b60c183a01d4a2d2386c9b2a5a2813",
+      "domain": "id.x5.ru",
+      "path": "/auth/realms/ssox5id/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "spjs",
+      "value": "1761046358359_1f045eff_01350185_6c4ae0908abaaf5ab572b48bb465752b_30syl5tCXq9ySxX0NWEPJDDrtvSxv0qLP8cD4qeuGqnsxZBBFYzJiFzEDs+TC0YG2kKfThKJxIU5wQ3soyoUgfRcmOh8hdEx9Xgqus7GIkOi7xt+HyXsmTB9ULXspEg+8MmUT+kQXK1SSxXAtLxYvMiVoWGla4o6OwMG1qeqSzGo0AkpcEzF8Dljls2DKmWj+cAN7LIJTFyIsOUVQXmiM1fLj1obUvPzN880dI3QbL3hTNBVOWLO7vLaF5L7hmoN2ZSzI7cP2qncRQJ3494Ka3rXxiOiSMGUCCBtvfSZBTaKp7tOV163omvEOejs5BVxkP0J6U028tJze07er6dTDID4kXRNId2NJHw2wWmBX2jlyIXJaC9Sa07hRjRBKMzvO9diM9YO2i3/Vwxdt03Bwa1Ame2xbCbGO9MY+7eOknaBmb/dqEQh8UU8+trfh9WUcYhMqv4FGTnFGRKQ7LTo32PNo+If9gr+g1sgYVSNuCgdxJdUIGvOj++2Q9PGb2tF24Mf7jPIdkb6U03tuYqk9PjAnG4wBPNnsdn9vTyB0aKQPvoqneRw9iKuwrKKowl4EB/DUjoFf63xSDSwfha7fH5nJ4XATE65ymE391PM+azKQ7aW4pyBclsDnv+y3/YFeeeda5B7x7crUwj4/MRwYeWduUkdRpKyVm4L+5uEV4yTa6DkuGP+jREIFecZgn14Nl5zM7uvuMmcVFABsq6JOs5HcmPWf/urPqc82zOO91K8lajZdP7dhWn1ahpG/pJx81l9WdeGxOtWXplgFhnqAAXPkkgsCX++U84XxpoCTw2xSYRlKIF+rHLIEcZ3L2s6/seTcBdtyZltZRDw9MxIN+vTn08TSvaGWkHt3xDpVST4wIxsMAfTo3dPGuqOhlIh9c2pahxUUNF0zZeVuwH/nCHZpQUpko7+4ipnRHhQXCv7xsNjPw0rKmzkcWq1vNkq3PSAcDarFyd6Qx9usIpUpfrBjm0yqJQkeUAf67sHViLF6+rIToXQoXTNGui+BFMv8EuTZz+C26536hPlvwFaLPdInGQoB1u7dkcC47Yce9ldEcY2E/ve+oiS6NmFfCYGrJR8u2c4ddOeF8q7lh5mrzggZJTA+S1dhl29eRx12SBVwZg5tAN9onMZt/B8lLhqx/+CY2vX24rmngTEJq47ov5nn2Jn3dugmQdA4LfIGqwbsJFvYqpmJ/tDnD2xgVbW+MKRbCQtM7JXfTr5nyHSodTsrR/L8qZmJkiBAYlhXapkLdAw+JB+WWWtYCDqgti9GIHFofUKDP1IVBV3UssP6nnmAmVgj5WjDGUJ6DQcYRf7Ram58wyh51rS2e9IgQXGggyZKN1nQ4GwO07MChMSKoWdsxP5orvYJG6jcvqJVSzjSZBsMA/5iXzEgdTwzckKvtOyIgZf2/vqZ2x8kPhhBenhvWhkL5O2+8xc/xAIRDPn34t7LxJ0EvRfOOk1jV4vBD2QVdAjjiROxFbXm4LWJf7GZZQ2zuVckcEd3acO+7pxPDu91nzVKd9l22CP/GNXwLOkDwhq5CN5Yn1tgIlkpOzN7Fk/98YD188b6r8GUCH3TZ9JndraGAANRNSJ93mi/V7DaOG/0rMSbMTovmQaKIlnk=",
+      "domain": ".5ka.ru",
+      "path": "/",
+      "expires": 1795606359.63616,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "spid",
+      "value": "1761046358359_985d6262937d63692829b7c73783afd7_x68wi2rwadbtivxq",
+      "domain": ".5ka.ru",
+      "path": "/",
+      "expires": 1795606359.636627,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "i",
+      "value": "7zWMCh7c9NgJZK38SERMkTO7GqJbcb6/zTakjZ8J9t5XOLyh7P3iYDNyxMSghh0sO7snq6WZC5X0TFwz60YHNandSBc=",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1795606388.214772,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "yandexuid",
+      "value": "6184227791761046388",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1795606390.025031,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "yashr",
+      "value": "6684935031761046388",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1792582388,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_uid",
+      "value": "1761046390600786396",
+      "domain": ".5ka.ru",
+      "path": "/",
+      "expires": 1792582389,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_d",
+      "value": "1761046390",
+      "domain": ".5ka.ru",
+      "path": "/",
+      "expires": 1792582389,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "yabs-sid",
+      "value": "2470996161761046389",
+      "domain": "mc.yandex.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "yuidss",
+      "value": "6184227791761046388",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1795606390.025084,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ymex",
+      "value": "2076406389.yrts.1761046389",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1792582389,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1792582415,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Host-next-auth.csrf-token",
+      "value": "d4d3fbff349805d769bf50d58bc7e753594514f87b4dd2ee8c6367c10c07010f%7Cf28043e9c894951698f7cbf159706d29d63692b6d541499468dec824e6f027bf",
+      "domain": "5ka.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "next_relogin_tried",
+      "value": "1",
+      "domain": "5ka.ru",
+      "path": "/",
+      "expires": 1763638391.235833,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "encryptedSessionId",
+      "value": "db1d3a8c2d43428a9c00af6763e3c08c6448667190aced8d4b915794f0c3e55b",
+      "domain": "5ka.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-next-auth.callback-url",
+      "value": "https%3A%2F%2F5ka.ru%2F",
+      "domain": "5ka.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NSC_JOpyoqi0d4jezz4e05ojmsclhcbelct",
+      "value": "ffffffff674825b845525d5f4f58455e445a4a4240db",
+      "domain": "id.x5.ru",
+      "path": "/",
+      "expires": 1761047014.967935,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "TS01f13338",
+      "value": "0147334a4aeb199f43d1d92307c8b1c7d56e52715067edafa9ea3a771b1f9ae3ee86ce7a6b6bcc9d9c3aa21c231cc6851757519ca5250fdc83054447d115d3da6be01e77bc",
+      "domain": ".id.x5.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SRV",
+      "value": "4426d988-a5ab-4ce8-82b1-0791112255e2",
+      "domain": "5d.5ka.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "TS018c7dc5",
+      "value": "01a2d8bbf4a2702279227aa58fa4dfa1abe485cb8b97555cf456f5be2972180ba78ac41a4f13271cc34dc1eab2730bc8e025c20d97407a03e57c5fc5774571d5d83760a8d7",
+      "domain": "5d.5ka.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "server_token",
+      "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsInNlc3Npb25JZCI6ImRiMWQzYThjMmQ0MzQyOGE5YzAwYWY2NzYzZTNjMDhjNjQ0ODY2NzE5MGFjZWQ4ZDRiOTE1Nzk0ZjBjM2U1NWIiLCJleHAiOjE3NjExMzI3OTMsImlhdCI6MTc2MTA0NjM5MywianRpIjoiYTFhZjY2MDYtZmJhZS00MmNmLTkzNDEtMDZiYTUwNjUyYzk4In0.lcDCrJ0jKtVMBsQ3nGtye1FuzdYe_sHmdJXqJ9mc9MY",
+      "domain": "5ka.ru",
+      "path": "/",
+      "expires": 1761132816,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "session_token_timestamp",
+      "value": "1761132793019",
+      "domain": "5ka.ru",
+      "path": "/",
+      "expires": 1761132816,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "spsc",
+      "value": "1761046401500_9a27b4657fb075de19194fb16e9424f1_OLGtpBuKvd51FK8avqhKJ6yPSsVKwQvSdnegz163T5W6WPUFEvzsNByganWPX71OZ",
+      "domain": ".5ka.ru",
+      "path": "/",
+      "expires": 1795606401.527506,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ADRUM_X5ID_ID",
+      "value": "3f748930-e39a-41df-91f1-a3be3ec620f4",
+      "domain": "id.x5.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ym_enable",
+      "value": "true",
+      "domain": "id.x5.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_sa",
+      "value": "SA1.abcc1c7d-b2f5-4c3f-9493-ec96b2fd4106.1761046401",
+      "domain": ".x5.ru",
+      "path": "/",
+      "expires": 1792582401,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "mpid",
+      "value": "NjhmNzZmODEwMTQyNmRmOQ==",
+      "domain": "sync.otm-r.ru",
+      "path": "/",
+      "expires": 1763724801.766557,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "x5_3pc",
+      "value": "6e222f7c-9b76-7c9f-9d87-abe4b364b6a1",
+      "domain": ".x5.ru",
+      "path": "/",
+      "expires": 1776598401.943939,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_uid",
+      "value": "1761046402454485867",
+      "domain": ".x5.ru",
+      "path": "/",
+      "expires": 1792582401,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_d",
+      "value": "1761046402",
+      "domain": ".x5.ru",
+      "path": "/",
+      "expires": 1792582401,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ym_isad",
+      "value": "2",
+      "domain": ".x5.ru",
+      "path": "/",
+      "expires": 1761118401,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1792582408,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "loginHint",
+      "value": "79169633158",
+      "domain": "id.x5.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "bh",
+      "value": "EiciTm90KUE7QnJhbmQiO3Y9IjgiLCAiQ2hyb21pdW0iO3Y9IjEzOCIaA3g4NiINMTM4LjAuNzIwNC4yMyoCPzA6ByJMaW51eCJCBjYuMTQuMEoCNjRSNiJOb3QpQTtCcmFuZCI7dj0iOC4wLjAuMCIsIkNocm9taXVtIjt2PSIxMzguMC43MjA0LjIzImCI393HBmoZ3MrpiA7yrLelC/v68OcN6//99g+K1M2HCA==",
+      "domain": ".yandex.ru",
+      "path": "/",
+      "expires": 1795606408,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-next-auth.session-token",
+      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..crUqwa0mrMpe751G.Tg--Br-Smi2AGnH_3HCLsnFo8Y9EaU7wlhic5B56nvUDR8VJMG_15RIKvlzXEO9SIQzwVH4S7Ut07vULTihw33nv3zPn6hc-E1fZyR2A_VuA600qOafPNU8Qwi294cSEnuEk9f8jyNg4CD0ot9sy-r4kvoRn27XGpwsygXcoKaK5qeA2QkWvcwNl4wutCHsR2PXZjI1gGhh9Kasxk4p6-KehC0fY4K5oKnIXMwcdYgg-BzV-naOpRvee5Q8NqumQOG5pMClEjR95rQEhSaCd7wN6VY-UauJegIlloaEEOFEb53PzuxybLvQ15yL1qhReh_9jEpQ8fTV5nZ_9dTIUR_jh1bm29loh2ateJ4e_GBEnRBdS1WFP8Tz7gpy0RHygr_ZtuElbcqiUc_7sI04g_VXsEV_xDNIEsq4Hrnh7e2l9wd4s4ebvJDenwQmzvz0SiVuVQ4GbABm4Qy9ce51I1cJ_AgJaN_zz-HOxXPwfQIBJ0tP4OEKkHK6vghzvPiqF6OpRLphD2zmtOKDH5BqrdoUS10m7MUcHs3b5971vXY19QgoKkC__rZ3hOHVJXOTYsykXOq1uz-K-r8h0njgzelN0ZPVNEdT-4B8kaxBO9_QyeSqX5dLW47Ui8I7vN879yNUZb0ud0ZH-S0asMVMa5-N4bjdaq6B0Oc35vcf7N6ShFCr0yOsPxE03SZJH2VRqnE93Oz4jfrVKJm9tMa_5GW4aDLG-OLxOAF3eJSyYtr5vVTbB-GbySHp3Vv17ilxAEjOdUZ0VqFHHMSlCR9us5rQO_Myhs6XOg_45AJwZC-4rpt4Rz1dYie9hIxR8w9LRGtUxyswS95AVnzS5eGNOxekSlWnII8P419moixah8stutDs_xsj_GYsP_0X7kUy5GLGEpgDDTXI5S0kjdCfaZShhtmsuDzp8kjhJxpQo7mw2gIRaJh_4BfgVYjLn_pw0b31CcjQ5k_NAlz7IFgYY7c4CiHMjyw4d_bJYpL4YoDb0hfMLYvGz5Erm90-YmRBNDVbbw-ONFF5PJ_CszpSjJr9Fxt8FCFI-JIdVgrSIGIckHcCXUYJv5S_WWasx2qUsgHeDcdmbP88nfe4Zq4orftoMkzSU8pCMJohPLJFd950q6-WHH1V3Gqmhu55Fncgmfq9ZM-fWuOftSq8XDmt7Ve4p6GDSTW9PAdcVq5QlMWJ9EBu4CamkJuYVUp8mMovLrls4aWw2csfEjj38iZkZwxsI5BI-CSa48Idval9K6KvHhVlCTZurzluGx_8iPkCZpWJrizk2Ny_BthBJPfYsuPqpGQKAnr2HgLSbRPZi9BYXthvJaSU5N-4mDyJCarXDg7YvBY_6JUF4nHdBU_locBZDa-vbSz2tqWkvOSzftumk5ZNLm7narjCOuTNYo54vLdGeej1bwN9cn2EOZrqrpfvpK3cc4NpKrI3JyEOkE2VES4jZtAOVYwYsF1_SM-C8RinT8rEe_c1qt7CzRbqb3PD0VLJfeWz0PDV9eUEcv5EpwxbfDyekIUVthNobTGQI45jg8mVCSqbe8U9nU0db3yz4HBrKGleai8pB89pkDNfrmv3ERbxCD4MuHoyVvfIqlScl_qApfn4VkEJ9HkCNjc04_xzISXDNgvUJvvOqz9aES48e3A7ZxrnTRcJCj0D2LwzLxuR-26x8foTONowXFmPAXefni1lIaKIGG4yqDdMHUgbn0yp-R9taYxWNWHtQsacAnNp11cwIfW2ldXR8nZBu4_HIo41-ziabZNbo5oydu-COtq3h_WKRc9X4fxwgdrNCmEdkfwSfec7Q3GRux4OhcZ7qxCDyoHY5CrXx1R7zAsoTQdhIqxLehXmg0flTF1WvqCHZGtrOb44YUB7Q4TZvRlz3eRU-v9wDn8lAZOAZmD1Y6izJflc_miGhbOBjbPnN9m0qTVCHLMlOyQJjNVVJqbs9o8hlo58tAPecA1OkHL9Te8GD97X4Yui2TwVkKei-omnu2Wm-Qx1_SD2GMqhRLTixrZ3BpqEEu8kcA-6KHYDBKSgN5SKwS1aD_5dZkTwu5dEoebtae5BlDbewHM5mgRyQTyQp16cIU2J3EcpP8embWLrPzC8mjnIWORS2QSY85t6yIhfeCd7Evr0SN_cxd7w1Kwce_jnTHFcrsyrbbd9t_yH6frN-fF7p2JscYGpHOBx6Zo1YSjxVlXvD4XYQewMgVH2EZy4HMENTSWYyjBd1g-WHOYb86pQPY-PNtBwRbIXVad4PpG3wn-y-h9OD58kZTtV8uNPAE8mujC6XCk8tZn0tnQNajof2qXAqKKepZlaAroH9ekb8dvM5MOkzgBHuaMfFZ8ImujAKn5uVe7TaLzz19WC_pd1eS2KJ5YCh06av4cTfneO5QjM3Dg3Mb16Q8kL8SBQlZbB_KXpFP_74a-hJqEPNIu3VbDiP8a42Wfv95SsSh_2N0noutY-fmj7xVjqkxTXz6CQeWXU7nNfLyrDf3GJf_cZiFVfDhPtelDtMcHxhBTFgOfo2eUsnqsDaax3fDiwFE_aHfzpGrSLFbhjUHs2cVd2ONgKfAafL3A-Lu9nS1EMrxPXw16HufI-t6_pI4mNiHnyHlr9wS3GQdA2IGIedCQhK78-vRwSrXjz2Zb9GJtf4_JOPeJQSWg826_H30siHuZubNIHXjFaBqrKghwqqVCaCo0apeK-6ri6vUA3wSdNIr_89bUlfuPYyf1jszUqHY4qCEp-X3pFGjwNfmIyr9xtQ9EUga26e-5OnKSjR5_vzOXUvn45bbI3pNpY5D-xvks0Q-nusfDcDak4FT_pe6pbOf39r1ZzQABF86oQw7eW1YwE2XAnGXA3HNWzkLXa3Lo5NoACZ8JICIJMfna8Im6W5ZVJst-exUf9t7c5WYOeSD8k5CrU0vnPi-1-50_KTP4LzIedDTj5mTuRMihyqspmA5lNioofQ2msxJFS6DuLfcHmKLHJVvRYS321Xc5W2u6DPrG9UMYF9utbmz1TaFQuZZ4qoyJFp1lIeYW_Gsp-Gpx2m7Fdk8zJm2TL1E6OZMIfrMZJwua-v3XHpf7YS5KhgCu9CLGFCkDu_6-psi8nkRpxa3NR60Q5dsb8EsffRQezAGygMXO8BV4btuJjd4Y0V273c7Fh0TrrkZCJWRwXCHwwj_v7zbrArYccjUNxxMmKUJI3u8NT5pU8sD9I4or47igHWbE0tgoaCTmMlk4vY3J8GbcNroQmV4kE6obFfoz2tdMB7GHZfPD2f1Zns56HpgoskvGdNX4CgjWWddg-Q.WOM1YSFJ7XzZS7Fpz5XKCg",
+      "domain": "5ka.ru",
+      "path": "/",
+      "expires": 1763638415.882411,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "TS01658276",
+      "value": "01a2d8bbf48e791a874a48f09cd76bcf78b8834a2e188cbaaab8c97b714d897c52a04998ebe47a05861b2f3aef505cd42d14d837fc5c755315b6f8dfd781f3803f35250db32c2be1f33be9e2d32c1835a430db726eaf85f3122c6127bc828bfa6c2db1ced0c5dbd27e3c4fc609df435112a6c73461718e87bb72485f5f5be4e311b110b4b3",
+      "domain": ".5ka.ru",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://5ka.ru",
+      "localStorage": [
+        {
+          "name": "salt",
+          "value": "5733f16164c169b097a0f6b7f609b4e18c8daa9706866865f816e71960f46db85248ba7343a2e6bdc42cff6ab3e2c8e3cb7ce2ffc980d2c8ed654c19b1ab72b4"
+        },
+        {
+          "name": "_ym_retryReqs",
+          "value": "{}"
+        },
+        {
+          "name": "cart-store",
+          "value": "{\"order\":null,\"cartFetchState\":0,\"createOrderFetchState\":0,\"deliveryFetchState\":0,\"orderId\":null,\"reviseProducts\":[],\"counterRetryFetch\":1,\"paymentMethods\":null,\"paymentMethodsFetchState\":0,\"paymentMethodsErrorStatusCode\":null,\"fetchProductBeforeOrder\":[],\"isNotFoundSummary\":false,\"isAvailabilityCheckExpectedAlert\":false,\"isAvailabilityCheckNonCriticalAlert\":false,\"selectedDeliveryTime\":{\"deliveryType\":\"express\",\"activeDay\":null},\"productFetch\":{}}"
+        },
+        {
+          "name": "is_cannot_get_auth_tokens",
+          "value": "false"
+        },
+        {
+          "name": "UserId",
+          "value": "no_name_user"
+        },
+        {
+          "name": "privateKey",
+          "value": "30820277020100300d06092a864886f70d0101010500048202613082025d02010002818100db4d435d089fda3364d5a79bd1eefb42b649c6bdeea64198ca8924e2a6cc0a0f1f6cbb7164e06a7eba5864254717b1c506868f905d49683267c1cc690f96750fc5106022b6d9ad2b488ec6f86b2b93f6196c784ac2c7439e8567a6215f0fa1d894543a87fe29e28829b375ef24d882c47ca64a20636de62a6ef3be9ec6f66657020301000102818036caf6ae4b85d9186734c4c4776efd035d95505d4b3fe9fad97beba5dfa3f24d75fe0e55562d861e34c3f9fda06628aa0027e5bdddb9061a35f76371ca8dbea063e3d00379f23e7764a88b2746faad5f7be12d9520489d2b0c8b9915e72dac8f9e2ada664f80f07ceef1876a00b7d6adc16c1c253d78bbcef5e1ad6b92540a61024100fd3f594dfe646df1e8db12340dd2daeb80cb2b0e35b14db3533cc6bc47534da0521b83cb7182401ec1b6ad02dd146c56f8c26a634911db58afadbc63d60561a1024100ddaf763c19f6d6cf53762461a629b6a798ecb29460a867d974ae285beb516d64d3ec752628b7ccd836b59eedeb7b05feb309690a1551661e85e8f1356b20b4f7024100946976a5ad8b1f9fa06e1a39e54c07bdf2299e9ee23a7925b9872994975c2b66e41779e2553016f1af66a5f7c2a64063abbf0be8099f6c6389f9102995f86b6102402aab08f0cc768c25df848fc013c1579cae7c706acaa7df45258617d2895a64d9d14863cbf26e5e09078eb1864d9aa22ec1bafff2a6e3c1ea021031ccfc4f9145024100e2703c3586d0ad658dbab5876013a73b2bfb9c0637fd7d215511a92374a1b5a74538b188b2fcaaa92ad0b34448b5f2410b8b44c5d7285ec259dc7908fddabc02"
+        },
+        {
+          "name": "DeliveryPanelStore",
+          "value": "{\"selectedAddress\":{\"value\":null,\"coordinates\":[],\"sapCode\":\"35XY\",\"shopAddress\":\"Москва, Севастопольский проспект, 28к2\"},\"filterData\":{\"value\":\"\",\"source\":[],\"loadingState\":0,\"coordinates\":[],\"selectedItem\":null,\"hasDelivery\":0,\"sapCode\":\"35XY\",\"shopAddress\":\"Москва, Севастопольский проспект, 28к2\",\"error\":null},\"geoPositionError\":false,\"fetchApplyPrevAddress\":6,\"isReadyForStorage\":true}"
+        },
+        {
+          "name": "encryptedUniqueWebId",
+          "value": "ea52b1887126a286ddb0a7f7d26c92a2b52d640c73873935b18d161cd50968cb"
+        },
+        {
+          "name": "_ym49423435:0_reqNum",
+          "value": "32"
+        },
+        {
+          "name": "loginId",
+          "value": "no_name_user"
+        },
+        {
+          "name": "server_token",
+          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsInNlc3Npb25JZCI6ImRiMWQzYThjMmQ0MzQyOGE5YzAwYWY2NzYzZTNjMDhjNjQ0ODY2NzE5MGFjZWQ4ZDRiOTE1Nzk0ZjBjM2U1NWIiLCJleHAiOjE3NjExMzI3OTMsImlhdCI6MTc2MTA0NjM5MywianRpIjoiYTFhZjY2MDYtZmJhZS00MmNmLTkzNDEtMDZiYTUwNjUyYzk4In0.lcDCrJ0jKtVMBsQ3nGtye1FuzdYe_sHmdJXqJ9mc9MY"
+        },
+        {
+          "name": "history",
+          "value": "[{\"pathname\":\"/\",\"query\":{}}]"
+        },
+        {
+          "name": "orderStore",
+          "value": "{\"paymentStatus\":10,\"paymentFetchState\":0,\"paymentData\":null,\"statusInfoMessage\":\"\",\"orders\":[],\"ordersFetch\":2,\"sberpayDeepLink\":\"\",\"pollingFetchState\":0,\"isNeedPollingOrders\":false}"
+        },
+        {
+          "name": "nextauth.message",
+          "value": "{\"event\":\"session\",\"data\":{\"trigger\":\"getSession\"},\"timestamp\":1761046415}"
+        },
+        {
+          "name": "LoyaltyStore",
+          "value": "{\"loyaltyData\":{\"barcode\":\"\",\"isOldBarcode\":false,\"isErrorBarcode\":false,\"isErrorCard\":false,\"isErrorBalance\":false,\"cardNo\":\"7789777111108002\",\"points\":343,\"rub\":34.3,\"lifetime\":0,\"cardStatus\":true,\"cashTimerCards\":\"2025-10-21T11:33:36.322Z\",\"cashTimerBalance\":\"2025-10-21T11:33:36.600Z\",\"cashTimerBarcode\":null,\"isCardEmpty\":false},\"loadingDataState\":2,\"loadingBarcodeState\":0,\"loadingPointState\":2}"
+        },
+        {
+          "name": "_ym49423435_lsid",
+          "value": "771901024441"
+        },
+        {
+          "name": "_ym_uid",
+          "value": "\"1761046390600786396\""
+        },
+        {
+          "name": "deviceId",
+          "value": "4b4a5d59-41c0-46c0-a4a3-48da5cd78d8d"
+        },
+        {
+          "name": "publicKey",
+          "value": "30819f300d06092a864886f70d010101050003818d0030818902818100db4d435d089fda3364d5a79bd1eefb42b649c6bdeea64198ca8924e2a6cc0a0f1f6cbb7164e06a7eba5864254717b1c506868f905d49683267c1cc690f96750fc5106022b6d9ad2b488ec6f86b2b93f6196c784ac2c7439e8567a6215f0fa1d894543a87fe29e28829b375ef24d882c47ca64a20636de62a6ef3be9ec6f666570203010001"
+        },
+        {
+          "name": "first_request_passed_key",
+          "value": "true"
+        },
+        {
+          "name": "chakra-ui-color-mode",
+          "value": "light"
+        },
+        {
+          "name": "session_token_timestamp",
+          "value": "1761132793019"
+        },
+        {
+          "name": "_SPUID",
+          "value": "908480983c574765b81b2c3d3de5baa0"
+        }
+      ]
+    },
+    {
+      "origin": "https://id.x5.ru",
+      "localStorage": [
+        {
+          "name": "_ym_synced",
+          "value": "{}"
+        },
+        {
+          "name": "_ym_uid",
+          "value": "\"1761046402454485867\""
+        },
+        {
+          "name": "_ym83748952:0_reqNum",
+          "value": "9"
+        },
+        {
+          "name": "_ym_retryReqs",
+          "value": "{}"
+        },
+        {
+          "name": "_ym83748952_lsid",
+          "value": "302747592727"
+        },
+        {
+          "name": "timer-sms-sms_check-v2",
+          "value": "\"2025-10-21T11:33:28.653Z\""
+        }
+      ]
+    }
+  ]
+}

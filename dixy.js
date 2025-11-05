@@ -2,10 +2,12 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const { exec } = require('child_process');
 const config = require('./playwright.config'); // Import Playwright settings
+const { deleteCacheFile, checkAuthentication, waitForManualLogin } = require('./dixyAuthUtils');
 
 const storageStatePath = 'cache/dixyStorageState.json';
 const ledgerFilePath = '~/src/lewwadoo/ledger/ledger-2022.ledger'; // Adjust the path if necessary
 const ledgerCommand = `ledger -f ${ledgerFilePath} balance "Assets:bonus:Дикси:Клуб Друзей"`;
+const timeoutForLogin = 240000;
 
 function getLoyaltyPointsFromLedger() {
   return new Promise((resolve, reject) => {
@@ -48,54 +50,91 @@ function getLoyaltyPointsFromLedger() {
     }
 
     const page = await context.newPage();
-
-    // If no session, navigate to dixy
-    if (!fs.existsSync(storageStatePath)) {
-      await page.goto('https://dixy.ru', { timeout: 60000 });
-
-      console.log("Please log in to dixy manually in the opened browser tab.");
-      await page.waitForTimeout(60000); // wait for manual login
-
-      // Save storage state to file after login
-      await context.storageState({ path: storageStatePath });
-      console.log('Session saved to', storageStatePath);
-    }
-
-    // Go to the main page to fetch loyalty points
-    await page.goto('https://dixy.ru/personal/cashbacks/', { timeout: 60000 });
-    const loyaltyPointsElementsSelector = '.clcaret-balance__count > span';
-    await page.waitForSelector(loyaltyPointsElementsSelector); // Wait for the element to appear
-
-    // Extract loyalty points from the page
-    const loyaltyPointsElements = await page.$$eval(loyaltyPointsElementsSelector, elements => 
-      elements.map(el => el.textContent.trim())
-    );
-
-    if (!loyaltyPointsElements || loyaltyPointsElements.length === 0) {
-      console.error('No loyalty points found on the page; cannot validate.');
-      return process.exit(2);
-    }
-
-    const webLoyaltyPoints = parseInt(loyaltyPointsElements[0], 10);
-
-    // Dynamically retrieve loyalty points from the ledger
-    const ledgerLoyaltyPoints = await getLoyaltyPointsFromLedger();
     
-    console.log(`Found loyalty points on dixy: ${webLoyaltyPoints}`);
-    console.log(`Expected loyalty points from ledger: ${ledgerLoyaltyPoints}`);
+    // Go to the personal page to check balance
+    await page.goto('https://dixy.ru/personal/', { timeout: 60000 });
+    
+    // Set zoom level to 50% for better visibility on small screens
+    await page.evaluate(() => {
+      document.body.style.zoom = '0.5';
+    });
 
-    // Compare the points
-
-    if (webLoyaltyPoints === ledgerLoyaltyPoints) {
-      console.log('Validation successful: loyalty points match.');
+    let isAuthenticated = await checkAuthentication(page);
+    if (!isAuthenticated) {
+      console.log('Not authenticated. Deleting cache and requiring manual login...');
+      deleteCacheFile(storageStatePath);
+      await browser.close();
+      
+      const newBrowser = await chromium.launch({ ...config, headless: false });
+      context = await newBrowser.newContext();
+      const newPage = await context.newPage();
+      await newPage.goto('https://dixy.ru/personal/', { timeout: 60000 });
+      
+      const loginCompleted = await waitForManualLogin(newPage, timeoutForLogin);
+      if (!loginCompleted) {
+        console.error('Manual login timeout. Exiting.');
+        await newBrowser.close();
+        process.exit(3);
+      }
+      
+      isAuthenticated = await checkAuthentication(newPage);
+      if (!isAuthenticated) {
+        console.error('Failed to authenticate even after manual login. Exiting.');
+        await newBrowser.close();
+        process.exit(3);
+      }
+      
+      await context.storageState({ path: storageStatePath });
+      console.log('New session saved to', storageStatePath);
+      await validateLoyaltyPoints(newPage);
+      await newBrowser.close();
+      return;
     } else {
-      console.error('Validation failed: loyalty points do not match.');
-      process.exit(1);
+      if (!fs.existsSync(storageStatePath)) {
+        await context.storageState({ path: storageStatePath });
+        console.log('Session saved to', storageStatePath);
+      }
     }
 
+    await validateLoyaltyPoints(page);
   } catch (error) {
     console.error('Error occurred:', error);
   } finally {
     await browser.close(); // Ensure the browser closes in any case
   }
 })();
+
+async function validateLoyaltyPoints(page) {
+  try {
+    // New selector for balance on /personal/ page
+    const balanceSelector = '.counts__num.num-js';
+    await page.waitForSelector(balanceSelector, { timeout: 15000 }); // Wait for the element to appear
+
+    // Extract loyalty points from the page
+    const balanceText = await page.$eval(balanceSelector, el => el.textContent.trim());
+
+    if (!balanceText || balanceText.length === 0) {
+      console.error('No loyalty points found on the page; cannot validate.');
+      process.exit(2);
+    }
+
+    const webLoyaltyPoints = parseInt(balanceText, 10);
+
+    // Dynamically retrieve loyalty points from the ledger
+    const ledgerLoyaltyPoints = await getLoyaltyPointsFromLedger();
+    
+    console.log(`Found loyalty points on Dixy: ${webLoyaltyPoints}`);
+    console.log(`Expected loyalty points from ledger: ${ledgerLoyaltyPoints}`);
+
+    // Compare the points
+    if (webLoyaltyPoints === ledgerLoyaltyPoints) {
+      console.log('✓ Validation successful: loyalty points match.');
+    } else {
+      console.error('✗ Validation failed: loyalty points do not match.');
+      process.exit(1);
+    }
+  } catch (error) {
+    console.error('Error during loyalty points validation:', error);
+    process.exit(2);
+  }
+}

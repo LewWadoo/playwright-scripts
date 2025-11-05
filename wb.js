@@ -2,10 +2,12 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const { exec } = require('child_process');
 const config = require('./playwright.config'); // Import Playwright settings
+const { deleteCacheFile, checkAuthentication, waitForManualLogin } = require('./wbAuthUtils');
 
-const storageStatePath = 'wbStorageState.json';
+const storageStatePath = 'cache/wbStorageState.json';
 const ledgerFilePath = '~/src/lewwadoo/ledger/ledger-2022.ledger';
 const ledgerCommand = `ledger -f ${ledgerFilePath} balance "Assets:электронные кошельки:WB Банк:Основные деньги"`;
+const timeoutForLogin = 240000;
 
 function getLedgerBalance() {
   return new Promise((resolve, reject) => {
@@ -40,16 +42,63 @@ function getLedgerBalance() {
     } else {
       context = await browser.newContext();
     }
+    
     const page = await context.newPage();
     const pageUrl = 'https://www.wildberries.ru/';
-    if (!fs.existsSync(storageStatePath)) {
-      await page.goto(pageUrl);
-      console.log("Please log in to Wildberries manually in the opened browser tab.");
-      await page.waitForTimeout(60000); // wait for manual login
-      await context.storageState({ path: storageStatePath });
-      console.log('Session saved to', storageStatePath);
-    }
     await page.goto(pageUrl);
+    
+    // Set zoom level to 50% for better visibility on small screens
+    await page.evaluate(() => {
+      document.body.style.zoom = '0.5';
+    });
+    
+    let isAuthenticated = await checkAuthentication(page);
+    if (!isAuthenticated) {
+      console.log('Not authenticated. Deleting cache and requiring manual login...');
+      deleteCacheFile(storageStatePath);
+      await browser.close();
+      
+      const newBrowser = await chromium.launch({ ...config, headless: false });
+      context = await newBrowser.newContext();
+      const newPage = await context.newPage();
+      await newPage.goto(pageUrl);
+      
+      const loginCompleted = await waitForManualLogin(newPage, timeoutForLogin);
+      if (!loginCompleted) {
+        console.error('Manual login timeout. Exiting.');
+        await newBrowser.close();
+        process.exit(3);
+      }
+      
+      isAuthenticated = await checkAuthentication(newPage);
+      if (!isAuthenticated) {
+        console.error('Failed to authenticate even after manual login. Exiting.');
+        await newBrowser.close();
+        process.exit(3);
+      }
+      
+      await context.storageState({ path: storageStatePath });
+      console.log('New session saved to', storageStatePath);
+      await validateBalance(newPage);
+      await newBrowser.close();
+      return;
+    } else {
+      if (!fs.existsSync(storageStatePath)) {
+        await context.storageState({ path: storageStatePath });
+        console.log('Session saved to', storageStatePath);
+      }
+    }
+    
+    await validateBalance(page);
+  } catch (error) {
+    console.error('Error occurred:', error);
+  } finally {
+    await browser.close();
+  }
+})();
+
+async function validateBalance(page) {
+  try {
     const balanceSelector = 'a.header__balance--bank';
     await page.waitForSelector(balanceSelector, { timeout: 15000 });
     const balanceText = await page.$eval(balanceSelector, el => el.textContent.trim());
@@ -57,21 +106,20 @@ function getLedgerBalance() {
     const match = balanceText.match(/(\d+)/);
     if (!match) {
       console.error('No balance value found on the page; cannot validate.');
-      return process.exit(2);
+      process.exit(2);
     }
     const webBalance = parseInt(match[1], 10);
     const ledgerBalance = await getLedgerBalance();
     console.log(`Found balance on Wildberries: ${webBalance}`);
     console.log(`Expected balance from ledger: ${ledgerBalance}`);
     if (webBalance === ledgerBalance) {
-      console.log('Validation successful: balance match.');
+      console.log('✓ Validation successful: balance match.');
     } else {
-      console.error('Validation failed: balance does not match.');
+      console.error('✗ Validation failed: balance does not match.');
       process.exit(1);
     }
   } catch (error) {
-    console.error('Error occurred:', error);
-  } finally {
-    await browser.close();
+    console.error('Error during balance validation:', error);
+    process.exit(2);
   }
-})();
+}
